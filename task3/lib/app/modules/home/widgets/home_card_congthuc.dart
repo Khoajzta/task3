@@ -11,7 +11,7 @@ class HomeCardCongthuc extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.go('/detail/${meal.idMeal}'); // truyền id = 123
+        context.push('/detail/${meal.idMeal}'); // truyền id = 123
       },
       child: Container(
         width: 200,

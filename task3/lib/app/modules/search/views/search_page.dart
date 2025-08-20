@@ -66,12 +66,6 @@ class _SearchPageState extends State<SearchPage> {
         automaticallyImplyLeading: false,
       ),
       body: Obx(() {
-        if (mealController.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        if (mealController.meals.isEmpty) {
-          return const Center(child: Text("Không tìm thấy món ăn"));
-        }
         return GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // 2 cột

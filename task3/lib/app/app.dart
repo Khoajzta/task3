@@ -38,6 +38,13 @@ final GoRouter _router = GoRouter(
           path: '/profile',
           builder: (context, state) => const ProfilePage(),
         ),
+        GoRoute(
+          path: '/detail/:idMeal',
+          builder: (context, state) {
+            final idMeal = state.pathParameters['idMeal']!;
+            return MealDetailPage(idMeal: idMeal);
+          },
+        ),
       ],
     ),
   ],

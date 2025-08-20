@@ -13,6 +13,7 @@ class _HomeListNguyenlieuState extends State<HomeListNguyenlieu> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Nguyên liệu', style: TextStyle(fontWeight: FontWeight.bold)),
         SizedBox(height: 20),

@@ -57,10 +57,7 @@ class BottomNavBar extends StatelessWidget {
                     : Colors.grey,
                 size: 32,
               ),
-              onPressed: () {
-                onItemTapped(2);
-                context.go('/bookmark');
-              },
+              onPressed: () {},
             ),
             IconButton(
               icon: Icon(

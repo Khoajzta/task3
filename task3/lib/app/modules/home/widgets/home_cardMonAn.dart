@@ -16,7 +16,7 @@ class HomeCardmonan extends StatelessWidget {
           // Thẻ chính (nền vàng nhạt)
           GestureDetector(
             onTap: () {
-              context.go('/detail/${meal.idMeal}');
+              context.push('/detail/${meal.idMeal}');
             },
             child: Container(
               margin: const EdgeInsets.only(

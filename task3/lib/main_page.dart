@@ -22,8 +22,6 @@ class _MainScaffoldState extends State<MainScaffold> {
       _selectedIndex = 0;
     else if (location.startsWith('/search'))
       _selectedIndex = 1;
-    else if (location.startsWith('/bookmark'))
-      _selectedIndex = 2;
     else if (location.startsWith('/profile'))
       _selectedIndex = 3;
 

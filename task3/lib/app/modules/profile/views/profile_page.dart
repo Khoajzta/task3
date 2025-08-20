@@ -113,7 +113,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    'Follow',
+                    'Message',
                     style: TextStyle(color: Color(0xffCEA700)),
                   ),
                 ),
@@ -139,13 +139,13 @@ class ProfilePage extends StatelessWidget {
                 height: 290, // fix chiều cao cho ListView ngang
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // 2 cột
-                    crossAxisSpacing: 8, // khoảng cách ngang
-                    mainAxisSpacing: 8, // khoảng cách dọc
+                    crossAxisCount: 3, // 2 cột
+                    crossAxisSpacing: 2, // khoảng cách ngang
+                    mainAxisSpacing: 2, // khoảng cách dọc
                     childAspectRatio:
-                        3 / 3.5, // 👈 điều chỉnh tỷ lệ (width / height)
+                        3 / 3, // 👈 điều chỉnh tỷ lệ (width / height)
                   ),
-                  scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.vertical,
                   itemCount: mealController.meals.length,
                   itemBuilder: (context, index) {
                     final meal = mealController.meals[index];
@@ -154,10 +154,14 @@ class ProfilePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.network(
-                            meal.strMealThumb.toString(),
-
-                            fit: BoxFit.fill,
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.network(
+                              meal.strMealThumb.toString(),
+                              width: 120,
+                              height: 120,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ],
                       ),

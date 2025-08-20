@@ -52,7 +52,7 @@ class CardCongthuc extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(Icons.account_circle),
+                      Icon(Icons.account_circle, color: Color(0xffCEA700)),
                       SizedBox(width: 20),
                       Text(
                         'Điinh Trọng Phúc',
